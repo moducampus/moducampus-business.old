@@ -4,7 +4,7 @@ require('dotenv').config()
 const express = require('express')
 
 const app = express()
-const router = require('./router/main');
+const router = require('router/main');
 // 라우터 설정
 
 app.set('views', __dirname + '/views');

@@ -2,12 +2,9 @@ const express = require('express')
 const router = express.Router();
 
 router.get('/',(req,res)=>{
-    res.render('index.html', {
+    res.render('index.ejs', {
         title: "MODUCAMPUS TESTPAGE"
     });
-
-    //ejs rendering test
-
 });
 
 module.exports = router
