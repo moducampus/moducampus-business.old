@@ -1,14 +1,8 @@
-const url = require('url');
+const express = require('express')
+const router = express.Router();
 
-module.exports = (app) => {
-    app.get('/',(req,res)=>{
-        res.render('index.html')
-    });
+router.get('/',(req,res)=>{
+    res.render('index.html')
+});
 
-    app.get('/assets/*',(req,res)=>{
-        /*
-            TODO:
-            url로 입력받은 path로 이미지 파일 접근
-        */
-    })
-}
+module.exports = router
