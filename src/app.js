@@ -8,9 +8,6 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 app.use(express.static('assets'));
-app.use('/', (req, res) => {
-  res.render('index.html');
-});
 
 app.listen(3001, () => {
   console.log("Express server has started on port 3001")
