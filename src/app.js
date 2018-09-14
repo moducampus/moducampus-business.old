@@ -4,7 +4,7 @@ require('dotenv').config()
 const express = require('express')
 
 const app = express()
-const router = require('router/main');
+const router = require('./router/main');
 // 라우터 설정
 
 app.set('views', __dirname + '/views');
@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 app.use('/assets', express.static('assets'));
-app.use(router)
+app.use(router);
 
 
 app.listen(3001, () => {
@@ -22,7 +22,6 @@ app.listen(3001, () => {
 /*
 CYJ
 TODO:
-- [x] 정적인 파일 로드할 수 있도록하기 url: /assets/*
 - [x] ejs코드가 돌아가도록 서버사이드 렌더링을 시작하기
 */
 
